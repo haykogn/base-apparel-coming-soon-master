@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Main */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 300 1em 'Josefin Sans', sans-serif;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(0, 36%, 70%);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    width: 40vw;
+    padding-left: 120px;
+} 
+
+
+.img-container {
+    align-self: flex-end;
+}
+
+
+header {
+    padding-bottom: 100px;
+    margin-top: 60px;
+}
+
+
+
+
+
+/* Rules */
+
+form {
+    position: relative;
+    padding-bottom: 150px;
+    width: 100%;
+}
+
+#girl {
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+main p {
+    padding: 40px 0;
+    font-weight: normal;
+    line-height: 1.7;    
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+span {
+    display: block;
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+}
+
+
+input {
+    border: .5px solid rgb(197, 193, 193);
+    color: hsl(0, 6%, 24%);
+    font: 600 1em 'Josefin Sans', sans-serif;
+    border-radius: 40px;
+    background: none;
+    padding: 17px 30px;
+    width: 100%;
+    outline: 0;
+}
+
+
+::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.submit {
+    width: 100px;
+    height: 51px;
+    border: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    border-radius: 40px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: 0;
+    box-shadow: 0px 5px 20px 0px hsl(0, 78%, 91%);
+    cursor: pointer;
+}
+
+
+.submit:focus {
+    background: hsl(0, 71%, 87%);
+    box-shadow: 0px 6px 20px -1px hsl(0, 42%, 68%);
+}
+
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    background: none;
+    position: relative;
+    left: 40px;
+    transform: rotate(45deg);
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+
+.error {
+    font-weight: 400;
+    font-size: 0.9em;
+    padding: 10px 30px;
+}
+
+
+.sign {
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    padding: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: hsl(0, 93%, 68%);
+    position: absolute;
+    top: 14px;
+    right: 110px;
+    visibility: hidden;
+}
+
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #333;
+}
+
+footer {
+    font-weight: 300;
+    font-size: 1em;
+    padding: 5px;
+    background: rgb(160, 144, 144);
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/* Media Query */
+
+
+/* Tablet */
+
+@media only screen and (max-width: 1190px) {
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
+    main {
+        padding-left: 0;
+        text-align: center;
+        width: 80vw;
+        padding: 0 40px;
+    }
+
+    .img-container {
+        order: -1;
+        align-self: center;
+    }
+
+    header {
+        order: -2;
+        padding-bottom: 50px;
+    }
+
+
+    #girl {
+        min-width: 300px;
+        min-height: 300px;
+        max-height: 600px;
+    }
+
+    
+
+}
+
+
+/* Mobile */
+
+
+@media only screen and (max-width: 414px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    main {
+        padding-left: 0;
+        text-align: center;
+        width: 80vw;
+        padding: 0 0;
+    }
+
+    .img-container {
+        order: -1;
+        align-self: center;
+    }
+
+    header {
+        order: -2;
+    }
+
+
+    #girl {
+        min-width: 250px;
+        min-height: 300px;
+        max-height: 320px;
+    }
+
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .submit {
+        width: 70px;
+    }
+
+
+    .sign {
+        display: none;
+    }
+
+    .arrow {
+        left: 25px;
+    }
+}
